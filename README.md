@@ -8,7 +8,7 @@
 ## The main repository for the 10 week iOS 501 Course.
 
 >We’re delighted to have you as a member of our Code 501: Advanced Software Development in iOS course. It'll be a lot of work and a lot of fun.
-In this course you will study professional techniques and practices as you advance your skills in iOS development. This course includes professional development curriculum to get you ready for your job search, plus job search assistance after graduation.This is the course layout for the 501 iOS Course at Code Fellows.
+In this course you will study professional techniques and practices as you advance your skills in iOS development. This is the course layout for the 501 iOS Course at Code Fellows.
 The first 9 weeks of the course we'll be studying Swift.
 This will be followed by a week long project built by students and written in Swift.
 
