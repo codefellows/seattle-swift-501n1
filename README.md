@@ -9,19 +9,16 @@
 
 >We’re delighted to have you as a member of our Code 501: Advanced Software Development in iOS course. It'll be a lot of work and a lot of fun.
 In this course you will study professional techniques and practices as you advance your skills in iOS development. This course includes professional development curriculum to get you ready for your job search, plus job search assistance after graduation.This is the course layout for the 501 iOS Course at Code Fellows.
-The first 4 weeks of the course we'll be studying Swift.
+The first 9 weeks of the course we'll be studying Swift.
 This will be followed by a week long project built by students and written in Swift.
-The next 4 weeks we'll be studying Objective-C.
-This will be followed with a week long project build by student teams and written in Objective-C.
 
 ## Instructional Staff
 * **Adam Wallraff - Lead Instructor**  
 
 ### At the end of this course, you will be able to:
-* Create mobile apps in Objective-C and Swift 3.
+* Create mobile apps using Swift 3.
 * Use industry tools and frameworks such as Cocoa, Xcode, UIKit, Git, and more.
 * Understand and know how to properly use UIKit, asynchronous code, CoreImage, NSURLSession and JSON, MapKit and CoreLocation, AutoLayout, Source Control, Core Data, Animation, and the app submission process.
-* Create a successful online brand, network, create an impressive resume, succeed in personal and technical interviews, and conduct a successful job search.
 
 ### Learn with Stacked Modules
 
@@ -39,21 +36,8 @@ Get ready to tackle some seriously ambitious material! You'll have the most succ
 
 * A Mac laptop running Yosemite, or newer, with plenty of free space on the hard drive
 * [Xcode](https://developer.apple.com/xcode/download/) from the Mac App Store with the command line tools
-* [SourceTree](https://www.sourcetreeapp.com/)
 * A subscription to the [Apple Developer Program](https://developer.apple.com/) - $99/year
 * A [GitHub](https://github.com/) account
-
-#### Required Textbook:
-* [Programming in Objective-C](http://www.amazon.com/gp/product/0321967607?keywords=programming%20in%20objective-c&qid=1453495920&ref_=sr_1_1&s=books&sr=1-1)
-* [Programming interviews Exposed](http://www.amazon.com/Programming-Interviews-Exposed-Secrets-Landing/dp/1118261364/ref=sr_1_1?s=books&ie=UTF8&qid=1464218248&sr=1-1&keywords=programming+interviews+exposed)
-
-## Course Reminders:
-  * Students will build from scratch, and present, a project during weeks 5 and 10.
-  * We will have individual/group ***Whiteboarding*** exercises on Fridays.
-  * There will be daily reading assignments that will be reviewed in class.
-  * One of the weekly assignments will be to fill out and submit your weekly surveys. This is to be done by **Monday** each week.
-  * Students will be required to be present each day. Maintaining a 90% attendance rate is required for graduation.
-    * If it is necessary to miss a class, students must discuss with Instructor prior to missing class.
 
 ## Course Outline:
 
