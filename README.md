@@ -1,4 +1,4 @@
-# iOS 401
+# iOS 501
 
 ## Course Specific Resources
 * [Canvas](https://canvas.instructure.com)
