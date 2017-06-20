@@ -32,10 +32,7 @@
 4. Once you've submitted your work, complete the merge of `thrusday-lab` to `master`  
 
 ### Reading Assignment (read **before** Class 10):
-* Cracking the coding Interview, Programming Interviews Exposed, Swift Algorithm Club repository:
-  * Stacks & Queues - look up these general topics in the above resources.  
-	* [Stacks](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Stack)  
-	* [Queues](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Queue)  
+* TBD 
 
 ## Other Resources
 * [Grading Rubrics](../../resources/)
