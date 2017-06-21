@@ -8,9 +8,7 @@ Create a Playground including the following:
 
 ## Reading Assignment (read **before** Class 2):  
 * Swift Programming Guide  
-	* Arrays  
-	* Dictionaries  
-	* Sets  
+	* [Collection Types](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/CollectionTypes.html)
 
 ## Other Resources  
 * [Lecture Slides](https://www.icloud.com/keynote/000xQyeffQnMUjdd1Uvy14R6Q#Week1_Day1)  

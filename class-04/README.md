@@ -17,10 +17,9 @@
    * Conform your Enum to the Error protocol. Implement custom error handling for different Error cases.   
 
 ## Reading Assignment (read **before** Class 5):  
-* Programming Interviews Exposed:  
-  * Big O(not a specific chapter, just look up general concept in the book)  
-  * [Big O From SwiftAlgorithmsClub](https://github.com/raywenderlich/swift-algorithm-club/blob/master/Big-O%20Notation.markdown)  
-  *
+* TBD  
+  *  
+
 ## Other Resources
 * [Grading Rubrics](../../resources/)
 * [Lecture Slides](https://www.icloud.com/keynote/000U6vesUJwxPXIHFk2bnURYw#Week1_Day4)
