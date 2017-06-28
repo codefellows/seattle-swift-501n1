@@ -17,8 +17,11 @@
    * Conform your Enum to the Error protocol. Implement custom error handling for different Error cases.   
 
 ## Reading Assignment (read **before** Class 5):  
-* TBD  
-  *  
+* Apple Documentation  
+  *  [Core Data Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html)   
+  * [KeyedArchiver](https://developer.apple.com/documentation/foundation/nskeyedarchiver)  
+  * [KeeyedUnarchiver](https://developer.apple.com/documentation/foundation/nskeyedunarchiver)
+  
 
 ## Other Resources
 * [Grading Rubrics](../../resources/)
