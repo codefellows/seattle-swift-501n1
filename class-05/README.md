@@ -1,8 +1,5 @@
 # Week 1 - Class 5
 
-## Data Structure and Whiteboarding  
-#### Big O & Pseudocode  
-
 ## Reading Assignment (read **before** Class 6):  
 * General Concepts:
   * [MVC](https://developer.apple.com/library/ios/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html)
@@ -13,4 +10,4 @@
 
 ## Other Resources
 * [Grading Rubrics](../../resources/)
-* [Lecture Slides](https://www.icloud.com/keynote/0B3bObDbQIb68f2ouwYs6tYBA#BigOIntro)
+* [Lecture Slides](https://www.icloud.com/keynote/0QajpKdyebyvrX0tP3ubL9Q4A#Week1_Day5)
