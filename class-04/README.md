@@ -6,11 +6,11 @@
     * (Int, Int)  
     * ()->()  
   * Demonstrate, using a switch statement, accessing each of the associated types.  
-  * Declare a `Person` class with 3 member properties. Declare a `Student` subclass that inherits from Person.  
-    * Both Your Student and Person class should have at least 2 meaningful Type and 2 Instance Methods that would apply to each type. *Be creative*.  
-    * In one of these 2 classes(`Student` or `Person`), demonstrate a computed property and implement a property observer.  
-    * Your `Student` class should have a `student ID` property that is a unique identifier for each student  
-  * Create a `Classroom` class that is a true singleton and has an array of `Students`.  
+  * Declare a `Person` class with 3 properties(for example: firstName, lastName, age). Declare a `Student` subclass that inherits from Person.  
+    * Both Your Student and Person class should have at least 2 Type Methods and 2 Instance Methods. *Be creative*.  
+    * In one of these 2 classes(`Student` or `Person`), demonstrate a computed property as well as a property observer.  
+    * Your `Student` class should have a `studentID` property that is a unique identifier for each student  
+  * Create a `Classroom` class that is a *true* singleton and has an array of `Students`.  
     * Add *accessor methods*(`add(Student:)`, `remove(Student:)`, `studentWith(id:)-> Student`, `allStudentNames()->[String]`, `studentCount()->Int`) to `Classroom` to access student data from the array.  
 
  ### Stretch goals
