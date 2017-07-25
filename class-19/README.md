@@ -40,12 +40,12 @@ The **Project Plan** document should contain the following information:
 * Upon clicking one of the `UICollectionViewCell`s, implement another `WKWebView` that shows the `selected` user's GitHub page.  
 
 ## Submitting Your Assignment  
-1. When your work is complete and ready for submission, **open a Pull Request** from `thursday-lab` to `master`.  
+1. When your work is complete and ready for submission, **open a Pull Request** from `class-19-lab` to `master`.  
 2. Submit the link to the above Pull Request to Canvas  
 3. Add a comment to this Canvas submission with answers to the following questions.  
   - How did this go, overall?  
   - What observations or questions do you have about what you've learned so far?  
-4. Once you've submitted your work, complete the merge of `thursday-lab` to `master`  
+4. Once you've submitted your work, complete the merge of `class-19-lab` to `master`  
 
 ## Reading Assignment:
 N/A.

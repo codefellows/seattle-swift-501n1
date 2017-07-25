@@ -8,7 +8,7 @@
 
 ## Technical Requirements  
  * Create a new repository properly set up with a license, README, and `.gitignore`, and clone to local machine  
- * Working on a non-master branch, called `monday-lab`, with regular commit history  
+ * Working on a non-master branch, called `class-11-lab`, with regular commit history  
  * Enable CloudKit in your applications *Capabilities*, we will continue to build this out tomorrow.  
  * Layout an `imageView` in the center of the screen using Auto Layout and give it a placeholder image.
    	* The placeholder image should be added to the asset catalog and should have all appropriate sizes added(1x,2x,3x).  
@@ -30,12 +30,12 @@
 
 ## Submitting Your Assignment  
 
-1. When your work is complete and ready for submission, **open a Pull Request** from `monday-lab` to `master`.  
+1. When your work is complete and ready for submission, **open a Pull Request** from `class-11-lab` to `master`.  
 2. Submit the link to the above Pull Request to Canvas  
 3. Add a comment to this Canvas submission with answers to the following questions.  
   - How did this go, overall?  
   - What observations or questions do you have about what you've learned so far?  
-4. Once you've submitted your work, complete the merge of `monday-lab` to `master`  
+4. Once you've submitted your work, complete the merge of `class-11-lab` to `master`  
 
 ### Readings (read **before** Class 12):  
 * Apple Documentation:  

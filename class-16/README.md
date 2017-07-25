@@ -23,12 +23,12 @@
 
 ## Submitting Your Assignment  
 
-1. When your work is complete and ready for submission, **open a Pull Request** from `monday-lab` to `master`.  
+1. When your work is complete and ready for submission, **open a Pull Request** from `class-16-lab` to `master`.  
 2. Submit the link to the above Pull Request to Canvas  
 3. Add a comment to this Canvas submission with answers to the following questions.  
   - How did this go, overall?  
   - What observations or questions do you have about what you've learned so far?  
-4. Once you've submitted your work, complete the merge of `monday-lab` to `master`  
+4. Once you've submitted your work, complete the merge of `class-16-lab` to `master`  
 
 ### Reading Assignment (read **before** Class 17):
 * GitHub API Documentation

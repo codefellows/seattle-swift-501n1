@@ -32,12 +32,12 @@
 
 ## Submitting Your Assignment  
 
-1. When your work is complete and ready for submission, **open a Pull Request** from `tuesday-lab` to `master`.  
+1. When your work is complete and ready for submission, **open a Pull Request** from `class-12-lab` to `master`.  
 2. Submit the link to the above Pull Request to Canvas  
 3. Add a comment to this Canvas submission with answers to the following questions.  
   - How did this go, overall?  
   - What observations or questions do you have about what you've learned so far?  
-4. Once you've submitted your work, complete the merge of `tuesday-lab` to `master`  
+4. Once you've submitted your work, complete the merge of `class-12-lab` to `master`  
 
 ### Readings (read **before** Class 13):  
 * [UICollectionView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/index.html)
