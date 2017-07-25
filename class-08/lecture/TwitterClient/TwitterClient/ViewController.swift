@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+
     @IBOutlet weak var tableView: UITableView!
     
     var allTweets = [Tweet]()
@@ -19,15 +21,38 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         self.tableView.dataSource = self
         
-        JSONParser.tweetsFrom(data: JSONParser.sampleTweetData) { (success, allTweets) in
-            guard let allTweets = allTweets else { return }
-            
-            self.allTweets = allTweets
-            self.tableView.reloadData()
-            
-            
+        //Used for working with Nib Cells
+        let nib = UINib(nibName: "TweetCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "tweetCell")
+        
+        //For dynamic cell height
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 75
+        
+        //API Call for tweets
+        API.shared.getTweets { (tweets) in
+            if let tweets = tweets {
+                OperationQueue.main.addOperation {
+                    self.allTweets = tweets
+                    self.tableView.reloadData()
+                    self.activityIndicator.stopAnimating()
+                }
+            }
         }
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "detailViewController"{
+            if let selectedIndex = self.tableView.indexPathForSelectedRow {
+                let selectedTweet = self.allTweets[selectedIndex.row]
+                
+                if let destinationController = segue.destination as? DetailViewController {
+                    destinationController.selectedTweet = selectedTweet
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +60,15 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCell
         
         let currentTweet = self.allTweets[indexPath.row]
         
-        cell.textLabel?.text = currentTweet.text
-        cell.detailTextLabel?.text = currentTweet.id
+        //cell.usernameLabel.text = currentTweet.user?.name
+        //cell.tweetLabel.text = currentTweet.text
+
+        cell.tweet = currentTweet
+        
         
         return cell
     }

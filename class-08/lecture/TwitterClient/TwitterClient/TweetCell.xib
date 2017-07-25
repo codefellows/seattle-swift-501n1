@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="125" id="G2J-RJ-wzU" customClass="TweetCell" customModule="TwitterClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="125"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2J-RJ-wzU" id="9wZ-i1-MUz">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ox-P0-0Un">
+                        <rect key="frame" x="8" y="8" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="dtY-xf-dcl"/>
+                            <constraint firstAttribute="height" constant="80" id="du7-2U-GkM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O2u-rJ-H2Z">
+                        <rect key="frame" x="96" y="8" width="125.5" height="33.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSy-Jz-hz8">
+                        <rect key="frame" x="8" y="96" width="345" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="3ox-P0-0Un" firstAttribute="top" secondItem="9wZ-i1-MUz" secondAttribute="topMargin" id="4Zw-U7-vlo"/>
+                    <constraint firstItem="uSy-Jz-hz8" firstAttribute="leading" secondItem="9wZ-i1-MUz" secondAttribute="leading" constant="8" id="DI6-3r-s0Z"/>
+                    <constraint firstAttribute="bottom" secondItem="uSy-Jz-hz8" secondAttribute="bottom" constant="8" id="H4S-ep-8Ho"/>
+                    <constraint firstItem="O2u-rJ-H2Z" firstAttribute="top" secondItem="9wZ-i1-MUz" secondAttribute="top" constant="8" id="Ic1-af-VwF"/>
+                    <constraint firstItem="3ox-P0-0Un" firstAttribute="leading" secondItem="9wZ-i1-MUz" secondAttribute="leadingMargin" id="agk-Ha-DDZ"/>
+                    <constraint firstItem="O2u-rJ-H2Z" firstAttribute="leading" secondItem="3ox-P0-0Un" secondAttribute="trailing" constant="8" id="fyE-kT-rbF"/>
+                    <constraint firstAttribute="trailing" secondItem="uSy-Jz-hz8" secondAttribute="trailing" constant="8" id="i9F-V9-2Ms"/>
+                    <constraint firstItem="uSy-Jz-hz8" firstAttribute="top" secondItem="3ox-P0-0Un" secondAttribute="bottom" constant="8" id="sak-Mf-1xT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="profileImage" destination="3ox-P0-0Un" id="afN-eG-LBo"/>
+                <outlet property="tweetLabel" destination="uSy-Jz-hz8" id="vVF-QJ-sD1"/>
+                <outlet property="usernameLabel" destination="O2u-rJ-H2Z" id="rgC-4b-GIO"/>
+            </connections>
+            <point key="canvasLocation" x="-129.5" y="-181.5"/>
+        </tableViewCell>
+    </objects>
+</document>
