@@ -14,6 +14,8 @@
 		1A4780871F2840460087E094 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4780861F2840460087E094 /* CloudKit.framework */; };
 		1A4780891F2847460087E094 /* CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4780881F2847460087E094 /* CloudKit.swift */; };
 		1A47808B1F284DE30087E094 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47808A1F284DE30087E094 /* HomeViewController.swift */; };
+		1A47808D1F2AE8480087E094 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47808C1F2AE8480087E094 /* Post.swift */; };
+		1A47808F1F2AE9530087E094 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47808E1F2AE9530087E094 /* UIExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		1A4780861F2840460087E094 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		1A4780881F2847460087E094 /* CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKit.swift; sourceTree = "<group>"; };
 		1A47808A1F284DE30087E094 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1A47808C1F2AE8480087E094 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		1A47808E1F2AE9530087E094 /* UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				1A4780881F2847460087E094 /* CloudKit.swift */,
+				1A47808C1F2AE8480087E094 /* Post.swift */,
+				1A47808E1F2AE9530087E094 /* UIExtension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 				1A4780891F2847460087E094 /* CloudKit.swift in Sources */,
 				1A47806F1F283F0E0087E094 /* AppDelegate.swift in Sources */,
 				1A47808B1F284DE30087E094 /* HomeViewController.swift in Sources */,
+				1A47808F1F2AE9530087E094 /* UIExtension.swift in Sources */,
+				1A47808D1F2AE8480087E094 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

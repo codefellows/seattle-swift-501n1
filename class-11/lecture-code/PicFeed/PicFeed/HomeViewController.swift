@@ -12,19 +12,36 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     let imagePicker = UIImagePickerController()
 
+    @IBOutlet weak var selectedImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
     @IBAction func userTappedImage(_ sender: Any) {
         print("user tapped image")
-        presentImagePicker(sourceType: .photoLibrary)
+//        presentImagePicker(sourceType: .camera)
+        
+        presentAlertController()
+    }
+    
+    func presentAlertController(){
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+            self.presentImagePicker(sourceType: .photoLibrary)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(photoLibraryAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+
     }
     
     
@@ -40,4 +57,21 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.dismiss(animated: true, completion: nil)
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            self.selectedImageView.image = image
+            print(image)
+        }
+        
+        self.dismiss(animated: true, completion: nil)
+
+    }
+    
 }
+
+
+
+
+
+

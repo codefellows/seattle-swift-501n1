@@ -9,11 +9,9 @@
 import Foundation
 import CloudKit
 
+typealias PostCompletion = (Bool)->()
+
 class CloudKit {
-    
-    let instanceProperty = "instance"
-    
-    static let staticProperty = "lives on the TYPE, not instance"
     
     static let shared = CloudKit()
     
@@ -25,6 +23,27 @@ class CloudKit {
     }
     
     private init (){}
+    
+    func save(post: Post, completion: @escaping PostCompletion) {
+        do {
+            if let record = try post.record() {
+                self.database.save(record, completionHandler: { (record, error) in
+                    if error != nil {
+                        print(error!)
+                        completion(false)
+                    }
+                    
+                    if let record = record {
+                        print(record)
+                        completion(true)
+                    }
+                    
+                })
+            }
+        } catch {
+            print(error)
+        }
+    }
     
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,31 +19,40 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plG-fr-oDp">
-                                <rect key="frame" x="46.5" y="20" width="281" height="333.5"/>
+                                <rect key="frame" x="51.666666666666657" y="40" width="310.66666666666663" height="368"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Wwp-gU-8k2" appends="YES" id="ShY-wt-h0j"/>
                                 </connections>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="np4-qI-Yvr">
+                                <rect key="frame" x="184" y="558" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="1I4-Dw-Ocj"/>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="5eg-HL-OJa"/>
+                            <constraint firstItem="np4-qI-Yvr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUN-SL-8Jv"/>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNF-dm-cIu"/>
-                            <constraint firstItem="plG-fr-oDp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="b5l-Mc-mlF"/>
+                            <constraint firstItem="plG-fr-oDp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="b5l-Mc-mlF"/>
+                            <constraint firstItem="np4-qI-Yvr" firstAttribute="top" secondItem="plG-fr-oDp" secondAttribute="bottom" constant="150" id="uhK-C6-rhl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="selectedImageView" destination="plG-fr-oDp" id="Bag-We-J2C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="Wwp-gU-8k2">
                     <connections>
-                        <action selector="userTappedImage:" destination="BYZ-38-t0r" id="Rc5-Pa-stO"/>
+                        <action selector="userTappedImage:" destination="BYZ-38-t0r" id="Trw-wM-Jxb"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
