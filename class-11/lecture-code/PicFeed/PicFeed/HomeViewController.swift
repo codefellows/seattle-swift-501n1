@@ -14,7 +14,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBOutlet weak var selectedImageView: UIImageView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +25,24 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         presentAlertController()
     }
+    
+    @IBAction func postButtonPressed(_ sender: Any) {
+        
+        if let newImage = self.selectedImageView.image {
+            let newPost = Post(image: newImage)
+            
+            CloudKit.shared.save(post: newPost, completion: { (success) in
+                if success {
+                    print("Successfully Saved to the Cloud!")
+                } else {
+                    print("Unsuccessful in saving to Cloud...")
+                }
+            })
+        }
+        
+        
+    }
+    
     
     func presentAlertController(){
         
