@@ -14,10 +14,23 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBOutlet weak var selectedImageView: UIImageView!
     
+    @IBOutlet weak var leadingConstraintForFilterButton: NSLayoutConstraint!
+    @IBOutlet weak var trailingConstraintForPostButton: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if self.selectedImageView.image != nil{
+            animateInButtons()
+        }
+    }
+    
     
     @IBAction func userTappedImage(_ sender: Any) {
         print("user tapped image")
@@ -39,6 +52,30 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             })
         }
+    }
+    
+    @IBAction func filterButtonPressed(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "Filters", message: "Please Select a filter:", preferredStyle: .alert)
+        
+        let chromeAction = UIAlertAction(title: "Chrome", style: .default) { (action) in
+            Filters.filter(image: self.selectedImageView.image!, withFilter: .CIPhotoEffectChrome, completion: { (filteredImage) in
+                self.selectedImageView.image = filteredImage
+            })
+        }
+        
+        let blackAndWhiteAction = UIAlertAction(title: "Black and White", style: .default) { (action) in
+            if let imageViewImage = self.selectedImageView.image {
+                Filters.filter(image: imageViewImage, withFilter: .CIPhotoEffectMono, completion: { (filteredImage) in
+                    self.selectedImageView.image = filteredImage
+                })
+            }
+        }
+    
+        alertController.addAction(blackAndWhiteAction)
+        alertController.addAction(chromeAction)
+        
+        self.present(alertController, animated: true, completion: nil)
         
         
     }
@@ -78,11 +115,22 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             self.selectedImageView.image = image
+
             print(image)
         }
         
         self.dismiss(animated: true, completion: nil)
 
+    }
+    
+    func animateInButtons(){
+        self.leadingConstraintForFilterButton.constant = 0
+        self.trailingConstraintForPostButton.constant = 0
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.view.layoutIfNeeded()
+            self.selectedImageView.layer.cornerRadius = 100
+        }
     }
     
 }

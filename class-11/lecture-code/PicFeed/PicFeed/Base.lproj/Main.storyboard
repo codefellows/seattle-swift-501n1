@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6cb-Rt-ixz">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PicFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plG-fr-oDp">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plG-fr-oDp">
                                 <rect key="frame" x="51.666666666666657" y="40" width="310.66666666666663" height="368"/>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
@@ -31,14 +31,25 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ8-Cz-QZt">
-                                <rect key="frame" x="206.66666666666663" y="428" width="155.33333333333337" height="49"/>
+                                <rect key="frame" x="707" y="428" width="155.33333333333337" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title=" POST ">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="postButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6DH-OB-7tU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMK-f5-gi6">
+                                <rect key="frame" x="-448.33333333333326" y="428" width="155.33333333333331" height="48"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="FILTER">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="filterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQW-co-hqb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,13 +59,20 @@
                             <constraint firstItem="plG-fr-oDp" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="5eg-HL-OJa"/>
                             <constraint firstItem="wZ8-Cz-QZt" firstAttribute="top" secondItem="plG-fr-oDp" secondAttribute="bottom" constant="20" id="Ro3-r8-ygy"/>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SNF-dm-cIu"/>
+                            <constraint firstItem="wZ8-Cz-QZt" firstAttribute="top" secondItem="HMK-f5-gi6" secondAttribute="top" id="Sld-UW-Mbj"/>
+                            <constraint firstItem="HMK-f5-gi6" firstAttribute="leading" secondItem="plG-fr-oDp" secondAttribute="leading" constant="-500" id="WfI-gQ-3wM"/>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="b5l-Mc-mlF"/>
                             <constraint firstItem="wZ8-Cz-QZt" firstAttribute="width" secondItem="plG-fr-oDp" secondAttribute="width" multiplier="0.5" id="mTu-hK-TVW"/>
-                            <constraint firstItem="wZ8-Cz-QZt" firstAttribute="trailing" secondItem="plG-fr-oDp" secondAttribute="trailing" id="rTM-ks-7bb"/>
+                            <constraint firstItem="wZ8-Cz-QZt" firstAttribute="trailing" secondItem="plG-fr-oDp" secondAttribute="trailing" constant="500" id="rTM-ks-7bb"/>
+                            <constraint firstItem="HMK-f5-gi6" firstAttribute="width" secondItem="wZ8-Cz-QZt" secondAttribute="width" id="tX6-vQ-V46"/>
+                            <constraint firstItem="HMK-f5-gi6" firstAttribute="height" secondItem="wZ8-Cz-QZt" secondAttribute="height" id="tXa-mY-Mlm"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="g6b-QN-O6L"/>
                     <connections>
+                        <outlet property="leadingConstraintForFilterButton" destination="WfI-gQ-3wM" id="f1y-fr-11E"/>
                         <outlet property="selectedImageView" destination="plG-fr-oDp" id="Bag-We-J2C"/>
+                        <outlet property="trailingConstraintForPostButton" destination="rTM-ks-7bb" id="0vF-Rn-mb9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,7 +82,44 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+            <point key="canvasLocation" x="931.88405797101461" y="35.054347826086961"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QHw-3g-4UJ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6cb-Rt-ixz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tb6-uE-saI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="88y-4w-XYg"/>
+                        <segue destination="j6B-Ly-Cdd" kind="relationship" relationship="viewControllers" id="6kq-Ob-Cq9"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ufm-gW-rNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-465" y="493"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="lVm-ss-jay">
+            <objects>
+                <viewController id="j6B-Ly-Cdd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5if-vf-LGg"/>
+                        <viewControllerLayoutGuide type="bottom" id="LQj-bI-VEA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g3V-KA-3DM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="7tn-6m-3jB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FuU-y4-G96" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926" y="731"/>
         </scene>
     </scenes>
 </document>
