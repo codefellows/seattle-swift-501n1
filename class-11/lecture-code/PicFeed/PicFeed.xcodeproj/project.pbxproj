@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A14E61E1F3AB08B00B0469C /* GalleryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14E61D1F3AB08B00B0469C /* GalleryFlowLayout.swift */; };
 		1A47806F1F283F0E0087E094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47806E1F283F0E0087E094 /* AppDelegate.swift */; };
 		1A4780741F283F0E0087E094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A4780721F283F0E0087E094 /* Main.storyboard */; };
 		1A4780761F283F0E0087E094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4780751F283F0E0087E094 /* Assets.xcassets */; };
@@ -17,9 +18,12 @@
 		1A47808D1F2AE8480087E094 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47808C1F2AE8480087E094 /* Post.swift */; };
 		1A47808F1F2AE9530087E094 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A47808E1F2AE9530087E094 /* UIExtension.swift */; };
 		1A4780911F31726F0087E094 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4780901F31726F0087E094 /* Filters.swift */; };
+		1A4780931F3419320087E094 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4780921F3419320087E094 /* GalleryViewController.swift */; };
+		1A4780951F341CF20087E094 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4780941F341CF20087E094 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A14E61D1F3AB08B00B0469C /* GalleryFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryFlowLayout.swift; sourceTree = "<group>"; };
 		1A47806B1F283F0E0087E094 /* PicFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A47806E1F283F0E0087E094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A4780731F283F0E0087E094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,6 +37,8 @@
 		1A47808C1F2AE8480087E094 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		1A47808E1F2AE9530087E094 /* UIExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		1A4780901F31726F0087E094 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
+		1A4780921F3419320087E094 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		1A4780941F341CF20087E094 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,8 @@
 		1A4780801F283F660087E094 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A14E61D1F3AB08B00B0469C /* GalleryFlowLayout.swift */,
+				1A4780941F341CF20087E094 /* PostCell.swift */,
 				1A4780721F283F0E0087E094 /* Main.storyboard */,
 				1A4780771F283F0E0087E094 /* LaunchScreen.storyboard */,
 			);
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				1A47808A1F284DE30087E094 /* HomeViewController.swift */,
+				1A4780921F3419320087E094 /* GalleryViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -204,11 +213,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A4780891F2847460087E094 /* CloudKit.swift in Sources */,
+				1A14E61E1F3AB08B00B0469C /* GalleryFlowLayout.swift in Sources */,
+				1A4780931F3419320087E094 /* GalleryViewController.swift in Sources */,
 				1A47806F1F283F0E0087E094 /* AppDelegate.swift in Sources */,
 				1A47808B1F284DE30087E094 /* HomeViewController.swift in Sources */,
 				1A4780911F31726F0087E094 /* Filters.swift in Sources */,
 				1A47808F1F2AE9530087E094 /* UIExtension.swift in Sources */,
 				1A47808D1F2AE8480087E094 /* Post.swift in Sources */,
+				1A4780951F341CF20087E094 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,7 @@
 				1A47807F1F283F0E0087E094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

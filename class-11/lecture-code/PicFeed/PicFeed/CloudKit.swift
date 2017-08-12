@@ -6,10 +6,11 @@
 //  Copyright © 2017 Adam Wallraff. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import CloudKit
 
 typealias PostCompletion = (Bool)->()
+typealias GetPostsCompletion = ([Post]?)->()
 
 class CloudKit {
     
@@ -45,7 +46,54 @@ class CloudKit {
         }
     }
     
+    func getPosts(completion: @escaping GetPostsCompletion){
+        
+        let query = CKQuery(recordType: "Post", predicate: NSPredicate(value: true))
+        
+
+        self.database.perform(query, inZoneWith: nil) { (records, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                completion(nil)
+            }
+            
+            if let records = records {
+                
+                var allPosts = [Post]()
+                
+                for record in records {
+                    
+                    guard let asset = record["image"] as? CKAsset else { continue }
+                    
+                    let path = asset.fileURL.path
+                    
+                    guard let image = UIImage(contentsOfFile: path) else { continue }
+                    
+                    let newPost = Post(image: image)
+                    
+                    allPosts.append(newPost)
+                    
+                }
+                
+                OperationQueue.main.addOperation {
+                    completion(allPosts)
+                }
+                
+                
+            } else {
+                completion(nil)
+            }
+            
+        }
+        
+    }
 }
+
+
+
+
+
+
 
 
 
