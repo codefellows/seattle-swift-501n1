@@ -12,7 +12,9 @@ import Social
 let gAnimationTime = 1.0
 
 
-class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GalleryViewControllerDelegate {
+class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, GalleryViewControllerDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let imagePicker = UIImagePickerController()
 
@@ -25,6 +27,8 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.collectionView.dataSource = self
         
         if let tabBarController = self.tabBarController, let viewControllers = tabBarController.viewControllers {
             
@@ -160,7 +164,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
             self.selectedImageView.image = image
-
+            self.collectionView.reloadData()
             print(image)
         }
         
@@ -182,6 +186,26 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             self.selectedImageView.layer.cornerRadius = 100
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! PostCell
+        
+        let filter = Filters.shared.allFilters[indexPath.row]
+        
+        if let image = self.selectedImageView.image {
+            
+            Filters.shared.filter(image: image, withFilter: filter, completion: { (filteredImage) in
+                cell.postImageView.image = filteredImage
+            })
+            
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Filters.shared.allFilters.count
     }
     
 }

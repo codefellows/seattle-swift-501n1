@@ -19,6 +19,8 @@ enum FilterNames: String{
 
 class Filters {
     
+    let allFilters = [FilterNames.CIPhotoEffectChrome, FilterNames.CIPhotoEffectMono, FilterNames.CIPhotoEffectTransfer]
+    
     static let shared = Filters()
     
     static var originalImage = UIImage()
@@ -53,9 +55,8 @@ class Filters {
             if let outputImage = filter.outputImage {
                 
                 if let cgImage = self.context.createCGImage(outputImage, from: outputImage.extent) {
-                    let uiImage  = UIImage(cgImage: cgImage)
                     OperationQueue.main.addOperation {
-                        completion(uiImage)
+                        completion(UIImage(cgImage: cgImage))
                     }
                 }
                 

@@ -53,6 +53,43 @@
                                     <action selector="filterButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KQW-co-hqb"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QNo-cJ-xKc">
+                                <rect key="frame" x="0.0" y="508" width="414" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="733-YA-dEi"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="krp-pN-0Ag">
+                                    <size key="itemSize" width="102" height="103"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="filterCell" id="utc-eS-loX" customClass="PostCell" customModule="PicFeed" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-1.6666666666666667" width="102" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="102" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vGA-LZ-mJy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="103"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vGA-LZ-mJy" secondAttribute="trailing" id="HCZ-Wu-pzZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="vGA-LZ-mJy" secondAttribute="bottom" id="Xxl-ey-rDx"/>
+                                            <constraint firstItem="vGA-LZ-mJy" firstAttribute="leading" secondItem="utc-eS-loX" secondAttribute="leading" id="abH-Hl-h5J"/>
+                                            <constraint firstItem="vGA-LZ-mJy" firstAttribute="top" secondItem="utc-eS-loX" secondAttribute="top" id="v6d-ty-hsu"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="postImageView" destination="vGA-LZ-mJy" id="ZCR-Qr-kPn"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -63,6 +100,9 @@
                             <constraint firstItem="wZ8-Cz-QZt" firstAttribute="top" secondItem="HMK-f5-gi6" secondAttribute="top" id="Sld-UW-Mbj"/>
                             <constraint firstItem="HMK-f5-gi6" firstAttribute="leading" secondItem="plG-fr-oDp" secondAttribute="leading" constant="-500" id="WfI-gQ-3wM"/>
                             <constraint firstItem="plG-fr-oDp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="b5l-Mc-mlF"/>
+                            <constraint firstAttribute="trailing" secondItem="QNo-cJ-xKc" secondAttribute="trailing" id="cCn-wf-uXb"/>
+                            <constraint firstItem="QNo-cJ-xKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dsk-5g-z9o"/>
+                            <constraint firstItem="QNo-cJ-xKc" firstAttribute="top" secondItem="plG-fr-oDp" secondAttribute="bottom" constant="100" id="ei7-5m-wfY"/>
                             <constraint firstItem="wZ8-Cz-QZt" firstAttribute="width" secondItem="plG-fr-oDp" secondAttribute="width" multiplier="0.5" id="mTu-hK-TVW"/>
                             <constraint firstItem="wZ8-Cz-QZt" firstAttribute="trailing" secondItem="plG-fr-oDp" secondAttribute="trailing" constant="500" id="rTM-ks-7bb"/>
                             <constraint firstItem="HMK-f5-gi6" firstAttribute="width" secondItem="wZ8-Cz-QZt" secondAttribute="width" id="tX6-vQ-V46"/>
@@ -71,6 +111,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="g6b-QN-O6L"/>
                     <connections>
+                        <outlet property="collectionView" destination="QNo-cJ-xKc" id="Zm7-Sj-Bms"/>
                         <outlet property="leadingConstraintForFilterButton" destination="WfI-gQ-3wM" id="f1y-fr-11E"/>
                         <outlet property="selectedImageView" destination="plG-fr-oDp" id="Bag-We-J2C"/>
                         <outlet property="trailingConstraintForPostButton" destination="rTM-ks-7bb" id="0vF-Rn-mb9"/>
