@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if segue.identifier == "detailViewController"{
+        if segue.identifier == "DetailViewController"{
             if let selectedIndex = self.tableView.indexPathForSelectedRow {
                 let selectedTweet = self.allTweets[selectedIndex.row]
                 
@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "", for: indexPath) as! TweetCell
         
         let currentTweet = self.allTweets[indexPath.row]
         
@@ -75,6 +75,11 @@ class ViewController: UIViewController, UITableViewDataSource {
 
 }
 
+extension UIResponder {
+    static var identifier: String {
+        return String(describing: self)
+    }
+}
 
 
 
