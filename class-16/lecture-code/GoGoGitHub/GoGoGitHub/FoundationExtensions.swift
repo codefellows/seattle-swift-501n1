@@ -24,3 +24,9 @@ extension UserDefaults {
         return synchronize()
     }
 }
+
+extension Collection {
+    var count : Int {
+        return self.characters.count
+    }
+}
